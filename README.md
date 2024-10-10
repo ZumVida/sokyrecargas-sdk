@@ -20,7 +20,7 @@ First allow get package from GitHub by editing `composer.json`
 Next install package
 
 ```shell
-composer require sokyrecargas/sdk:dev-main
+composer require sokyrecargas/sdk:dev-php-7.2
 ```
 
 ## Usage
