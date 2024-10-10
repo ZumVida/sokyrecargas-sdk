@@ -10,7 +10,7 @@ use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 use Sokyrecargas\HttpClient;
 
-readonly class BaseModule
+class BaseModule
 {
     /**
      * @throws GuzzleException

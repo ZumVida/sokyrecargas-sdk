@@ -5,7 +5,7 @@ namespace Sokyrecargas\Modules;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
-final readonly class Offer extends BaseModule
+final class Offer extends BaseModule
 {
     /**
      * Obtener las ofertas disponibles paginadas.
@@ -19,7 +19,6 @@ final readonly class Offer extends BaseModule
         return $this->http()->get('/v1/offers', [
             'query' => [
                 'for_customer' => true,
-                ...$params,
             ],
         ]);
     }

@@ -5,7 +5,7 @@ namespace Sokyrecargas\Modules;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
-final readonly class User extends BaseModule
+final class User extends BaseModule
 {
     /**
      * Obtener usuario actual.

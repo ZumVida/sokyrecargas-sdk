@@ -5,7 +5,7 @@ namespace Sokyrecargas\Modules;
 use GuzzleHttp\Exception\GuzzleException;
 use Psr\Http\Message\ResponseInterface;
 
-final readonly class Refill extends BaseModule
+final class Refill extends BaseModule
 {
     /**
      * Crea una nueva recarga.

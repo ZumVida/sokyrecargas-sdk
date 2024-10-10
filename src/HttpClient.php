@@ -9,9 +9,9 @@ use GuzzleHttp\Client;
 class HttpClient
 {
     // Hold the instance of the Guzzle client
-    private static ?Client $client    = null;
-    private static string $baseUrl    = 'https://api.sokyrecargas.com/api';
-    private static ?string $authToken = null;
+    private static $client    = null;
+    private static $baseUrl    = 'https://api.sokyrecargas.com/api';
+    private static $authToken = null;
 
     // Private constructor to prevent instantiation
     private function __construct() {}
@@ -21,12 +21,12 @@ class HttpClient
      */
     public static function getClient(
         string $baseUrl = 'https://api.sokyrecargas.com/api',
-        ?string $authToken = null,
+        ?string $authToken = null
     ): Client {
 
         self::setConfig(
-            baseUrl: $baseUrl,
-            authToken: $authToken,
+            $baseUrl,
+            $authToken
         );
 
         if (self::$client === null) {
@@ -50,7 +50,7 @@ class HttpClient
 
     private static function setConfig(
         ?string $baseUrl = null,
-        ?string $authToken = null,
+        ?string $authToken = null
     ): void {
         if ($authToken) {
             self::$authToken = $authToken;

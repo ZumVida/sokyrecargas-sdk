@@ -7,20 +7,19 @@ use Sokyrecargas\Modules\Offer;
 use Sokyrecargas\Modules\Refill;
 use Sokyrecargas\Modules\User;
 
-readonly class Client
+class Client
 {
-    private \GuzzleHttp\Client $client;
 
     public function __construct(
-        string $apiKey,
-        private string $apiBaseUrl = 'https://api.sokyrecargas.com/api',
+        $apiBaseUrl,
+        $authToken
     )
     {
         $this->client = HttpClient::getClient(
-            baseUrl: $this->apiBaseUrl,
+            $apiBaseUrl
         );
-
-        HttpClient::setAuthToken($apiKey);
+        if($authToken)
+            HttpClient::setAuthToken($authToken);
     }
 
     public function offer(): Offer
