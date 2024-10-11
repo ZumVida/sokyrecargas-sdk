@@ -16,7 +16,7 @@ final class Offer extends BaseModule
      */
     public function list(array $params): ResponseInterface
     {
-        return $this->http()->get('/v1/offers', [
+        return $this->http()->get('/api/v1/offers', [
             'query' => [
                 'for_customer' => true,
             ],

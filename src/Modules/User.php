@@ -16,6 +16,6 @@ final class User extends BaseModule
      */
     public function current(): ResponseInterface
     {
-        return $this->http()->get('/v1/users/auth/current');
+        return $this->http()->get('/api/v1/users/auth/current');
     }
 }

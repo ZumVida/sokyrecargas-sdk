@@ -16,10 +16,9 @@ class Client
     )
     {
         $this->client = HttpClient::getClient(
-            $apiBaseUrl
+            $apiBaseUrl,
+            $authToken
         );
-        if($authToken)
-            HttpClient::setAuthToken($authToken);
     }
 
     public function offer(): Offer

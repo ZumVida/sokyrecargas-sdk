@@ -16,7 +16,7 @@ final class Refill extends BaseModule
      */
     public function create(array $params): ResponseInterface
     {
-        return $this->http()->post('/v1/recharges', $params);
+        return $this->http()->post('/api/v1/recharges', $params);
     }
 
     /**
@@ -28,7 +28,7 @@ final class Refill extends BaseModule
      */
     public function listMine(): ResponseInterface
     {
-        return $this->http()->get('/v1/recharges/mine');
+        return $this->http()->get('/api/v1/recharges/mine');
     }
 
     /**
@@ -40,6 +40,6 @@ final class Refill extends BaseModule
      */
     public function details(int $id): ResponseInterface
     {
-        return $this->http()->get("/v1/recharges/{$id}");
+        return $this->http()->get("/api/v1/recharges/{$id}");
     }
 }
