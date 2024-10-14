@@ -4,6 +4,7 @@ namespace Sokyrecargas;
 
 use Psr\Http\Message\ResponseInterface;
 use Sokyrecargas\Modules\Offer;
+use Sokyrecargas\Modules\Operator;
 use Sokyrecargas\Modules\Refill;
 use Sokyrecargas\Modules\User;
 
@@ -24,6 +25,11 @@ class Client
     public function offer(): Offer
     {
         return new Offer();
+    }
+
+    public function operator(): Operator
+    {
+        return new Operator();
     }
 
     public function refill(): Refill
