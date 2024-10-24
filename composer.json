@@ -1,6 +1,7 @@
 {
     "name": "sokyrecargas/sdk",
     "description": "PHP sdk for the SokyRecargas API",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -16,7 +17,7 @@
     ],
     "require": {
         "ext-json": "*",
-        "php": "^7.2|^8.2",
+        "php": "^7.2",
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
